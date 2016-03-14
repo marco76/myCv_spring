@@ -1,6 +1,7 @@
 package ch.javaee.mycv.model;
 
 import com.mongodb.MongoClient;
+import com.mongodb.MongoClientURI;
 
 import javax.annotation.PostConstruct;
 import javax.ejb.*;
@@ -22,7 +23,12 @@ public class MongoClientProvider {
 
     @PostConstruct
     public void init() {
+        if (System.getenv("OPENSHIFT_MONGODB_DB_URL") == null){
             mongoClient = new MongoClient();
+        }
+        else {
+           mongoClient = new MongoClient(new MongoClientURI(System.getenv("OPENSHIFT_MONGODB_DB_URL")));
+        };
  }
 
 }
