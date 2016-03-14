@@ -1,6 +1,9 @@
 # myCv
 
 This is the code of the website <a href="http://mycv.host">mycv.host</a>
+
+More details here: <a href="http://javaee.ch/2016/03/14/openshift-angularjs-javaee-mongodb-css-mycv/">javaee blog</a>
+
 The application is built using:
 - AngularJS
 - Java EE 7 (WildFly)
