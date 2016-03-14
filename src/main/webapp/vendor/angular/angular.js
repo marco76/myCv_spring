@@ -1730,7 +1730,7 @@ function reloadWithDebugInfo() {
  * @name angular.getTestability
  * @module ng
  * @description
- * Get the testability service for the instance of Angular on the given
+ * Get the testability ch.javaee.mycv.service for the instance of Angular on the given
  * element.
  * @param {DOMElement} element DOM element which is the root of angular application.
  */
@@ -1963,7 +1963,7 @@ function setupModuleLoader(window) {
      * // Create a new module
      * var myModule = angular.module('myModule', []);
      *
-     * // register a new service
+     * // register a new ch.javaee.mycv.service
      * myModule.value('appName', 'MyCoolApp');
      *
      * // configure existing services inside initialization blocks.
@@ -2052,9 +2052,9 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#provider
            * @module ng
-           * @param {string} name service name
+           * @param {string} name ch.javaee.mycv.service name
            * @param {Function} providerType Construction function for creating new instance of the
-           *                                service.
+           *                                ch.javaee.mycv.service.
            * @description
            * See {@link auto.$provide#provider $provide.provider()}.
            */
@@ -2064,8 +2064,8 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#factory
            * @module ng
-           * @param {string} name service name
-           * @param {Function} providerFunction Function for creating new instance of the service.
+           * @param {string} name ch.javaee.mycv.service name
+           * @param {Function} providerFunction Function for creating new instance of the ch.javaee.mycv.service.
            * @description
            * See {@link auto.$provide#factory $provide.factory()}.
            */
@@ -2075,10 +2075,10 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#service
            * @module ng
-           * @param {string} name service name
+           * @param {string} name ch.javaee.mycv.service name
            * @param {Function} constructor A constructor function that will be instantiated.
            * @description
-           * See {@link auto.$provide#service $provide.service()}.
+           * See {@link auto.$provide#service $provide.ch.javaee.mycv.service()}.
            */
           service: invokeLaterAndSetModuleName('$provide', 'service'),
 
@@ -2086,7 +2086,7 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#value
            * @module ng
-           * @param {string} name service name
+           * @param {string} name ch.javaee.mycv.service name
            * @param {*} object Service instance object.
            * @description
            * See {@link auto.$provide#value $provide.value()}.
@@ -2109,9 +2109,9 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#decorator
            * @module ng
-           * @param {string} The name of the service to decorate.
-           * @param {Function} This function will be invoked when the service needs to be
-           *                                    instantiated and should return the decorated service instance.
+           * @param {string} The name of the ch.javaee.mycv.service to decorate.
+           * @param {Function} This function will be invoked when the ch.javaee.mycv.service needs to be
+           *                                    instantiated and should return the decorated ch.javaee.mycv.service instance.
            * @description
            * See {@link auto.$provide#decorator $provide.decorator()}.
            */
@@ -2130,7 +2130,7 @@ function setupModuleLoader(window) {
            *
            *
            * Defines an animation hook that can be later used with
-           * {@link $animate $animate} service and directives that use this service.
+           * {@link $animate $animate} ch.javaee.mycv.service and directives that use this ch.javaee.mycv.service.
            *
            * ```js
            * module.animation('.animation-name', function($inject1, $inject2) {
@@ -2198,7 +2198,7 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#config
            * @module ng
-           * @param {Function} configFn Execute this function on module load. Useful for service
+           * @param {Function} configFn Execute this function on module load. Useful for ch.javaee.mycv.service
            *    configuration.
            * @description
            * Use this method to register work which needs to be performed on module loading.
@@ -3609,7 +3609,7 @@ forEach({
 });
 
 
-// Provider for private $$jqLite service
+// Provider for private $$jqLite ch.javaee.mycv.service
 function $$jqLiteProvider() {
   this.$get = function $$jqLite() {
     return extend(JQLite, {
@@ -3827,7 +3827,7 @@ function annotate(fn, strictDi, name) {
 ///////////////////////////////////////
 
 /**
- * @ngdoc service
+ * @ngdoc ch.javaee.mycv.service
  * @name $injector
  *
  * @description
@@ -3884,7 +3884,7 @@ function annotate(fn, strictDi, name) {
  * @name $injector#get
  *
  * @description
- * Return an instance of the service.
+ * Return an instance of the ch.javaee.mycv.service.
  *
  * @param {string} name The name of the instance to retrieve.
  * @param {string=} caller An optional string to provide the origin of the function call for error messages.
@@ -3911,10 +3911,10 @@ function annotate(fn, strictDi, name) {
  * @name $injector#has
  *
  * @description
- * Allows the user to query if the particular service exists.
+ * Allows the user to query if the particular ch.javaee.mycv.service exists.
  *
- * @param {string} name Name of the service to query.
- * @returns {boolean} `true` if injector has given service.
+ * @param {string} name Name of the ch.javaee.mycv.service to query.
+ * @returns {boolean} `true` if injector has given ch.javaee.mycv.service.
  */
 
 /**
@@ -3936,7 +3936,7 @@ function annotate(fn, strictDi, name) {
  * @name $injector#annotate
  *
  * @description
- * Returns an array of service names which the function is requesting for injection. This API is
+ * Returns an array of ch.javaee.mycv.service names which the function is requesting for injection. This API is
  * used by the injector to determine which services need to be injected into the function when the
  * function is invoked. There are three ways in which the function can be annotated with the needed
  * dependencies.
@@ -4007,7 +4007,7 @@ function annotate(fn, strictDi, name) {
  *    ).toEqual(['$compile', '$rootScope']);
  * ```
  *
- * @param {Function|Array.<string|Function>} fn Function for which dependent service names need to
+ * @param {Function|Array.<string|Function>} fn Function for which dependent ch.javaee.mycv.service names need to
  * be retrieved as described above.
  *
  * @param {boolean=} [strictDi=false] Disallow argument name annotation inference.
@@ -4019,40 +4019,40 @@ function annotate(fn, strictDi, name) {
 
 
 /**
- * @ngdoc service
+ * @ngdoc ch.javaee.mycv.service
  * @name $provide
  *
  * @description
  *
- * The {@link auto.$provide $provide} service has a number of methods for registering components
+ * The {@link auto.$provide $provide} ch.javaee.mycv.service has a number of methods for registering components
  * with the {@link auto.$injector $injector}. Many of these functions are also exposed on
  * {@link angular.Module}.
  *
- * An Angular **service** is a singleton object created by a **service factory**.  These **service
- * factories** are functions which, in turn, are created by a **service provider**.
- * The **service providers** are constructor functions. When instantiated they must contain a
- * property called `$get`, which holds the **service factory** function.
+ * An Angular **ch.javaee.mycv.service** is a singleton object created by a **ch.javaee.mycv.service factory**.  These **ch.javaee.mycv.service
+ * factories** are functions which, in turn, are created by a **ch.javaee.mycv.service provider**.
+ * The **ch.javaee.mycv.service providers** are constructor functions. When instantiated they must contain a
+ * property called `$get`, which holds the **ch.javaee.mycv.service factory** function.
  *
- * When you request a service, the {@link auto.$injector $injector} is responsible for finding the
- * correct **service provider**, instantiating it and then calling its `$get` **service factory**
- * function to get the instance of the **service**.
+ * When you request a ch.javaee.mycv.service, the {@link auto.$injector $injector} is responsible for finding the
+ * correct **ch.javaee.mycv.service provider**, instantiating it and then calling its `$get` **ch.javaee.mycv.service factory**
+ * function to get the instance of the **ch.javaee.mycv.service**.
  *
- * Often services have no configuration options and there is no need to add methods to the service
+ * Often services have no configuration options and there is no need to add methods to the ch.javaee.mycv.service
  * provider.  The provider will be no more than a constructor function with a `$get` property. For
- * these cases the {@link auto.$provide $provide} service has additional helper methods to register
+ * these cases the {@link auto.$provide $provide} ch.javaee.mycv.service has additional helper methods to register
  * services without specifying a provider.
  *
- * * {@link auto.$provide#provider provider(provider)} - registers a **service provider** with the
+ * * {@link auto.$provide#provider provider(provider)} - registers a **ch.javaee.mycv.service provider** with the
  *     {@link auto.$injector $injector}
  * * {@link auto.$provide#constant constant(obj)} - registers a value/object that can be accessed by
  *     providers and services.
  * * {@link auto.$provide#value value(obj)} - registers a value/object that can only be accessed by
  *     services, not providers.
- * * {@link auto.$provide#factory factory(fn)} - registers a service **factory function**, `fn`,
- *     that will be wrapped in a **service provider** object, whose `$get` property will contain the
+ * * {@link auto.$provide#factory factory(fn)} - registers a ch.javaee.mycv.service **factory function**, `fn`,
+ *     that will be wrapped in a **ch.javaee.mycv.service provider** object, whose `$get` property will contain the
  *     given factory function.
- * * {@link auto.$provide#service service(class)} - registers a **constructor function**, `class`
- *     that will be wrapped in a **service provider** object, whose `$get` property will instantiate
+ * * {@link auto.$provide#service ch.javaee.mycv.service(class)} - registers a **constructor function**, `class`
+ *     that will be wrapped in a **ch.javaee.mycv.service provider** object, whose `$get` property will instantiate
  *      a new object using the given constructor function.
  *
  * See the individual methods for more information and examples.
@@ -4065,17 +4065,17 @@ function annotate(fn, strictDi, name) {
  *
  * Register a **provider function** with the {@link auto.$injector $injector}. Provider functions
  * are constructor functions, whose instances are responsible for "providing" a factory for a
- * service.
+ * ch.javaee.mycv.service.
  *
- * Service provider names start with the name of the service they provide followed by `Provider`.
- * For example, the {@link ng.$log $log} service has a provider called
+ * Service provider names start with the name of the ch.javaee.mycv.service they provide followed by `Provider`.
+ * For example, the {@link ng.$log $log} ch.javaee.mycv.service has a provider called
  * {@link ng.$logProvider $logProvider}.
  *
  * Service provider objects can have additional methods which allow configuration of the provider
- * and its service. Importantly, you can configure what kind of service is created by the `$get`
- * method, or how that service will act. For example, the {@link ng.$logProvider $logProvider} has a
+ * and its ch.javaee.mycv.service. Importantly, you can configure what kind of ch.javaee.mycv.service is created by the `$get`
+ * method, or how that ch.javaee.mycv.service will act. For example, the {@link ng.$logProvider $logProvider} has a
  * method {@link ng.$logProvider#debugEnabled debugEnabled}
- * which lets you specify whether the {@link ng.$log $log} service will log debug messages to the
+ * which lets you specify whether the {@link ng.$log $log} ch.javaee.mycv.service will log debug messages to the
  * console or not.
  *
  * @param {string} name The name of the instance. NOTE: the provider will be available under `name +
@@ -4091,7 +4091,7 @@ function annotate(fn, strictDi, name) {
 
  * @example
  *
- * The following example shows how to create a simple event tracking service and register it using
+ * The following example shows how to create a simple event tracking ch.javaee.mycv.service and register it using
  * {@link auto.$provide#provider $provide.provider()}.
  *
  * ```js
@@ -4104,7 +4104,7 @@ function annotate(fn, strictDi, name) {
  *      trackingUrl = url;
  *    };
  *
- *    // The service factory function
+ *    // The ch.javaee.mycv.service factory function
  *    this.$get = ['$http', function($http) {
  *      var trackedEvents = {};
  *      return {
@@ -4159,11 +4159,11 @@ function annotate(fn, strictDi, name) {
  * @name $provide#factory
  * @description
  *
- * Register a **service factory**, which will be called to return the service instance.
- * This is short for registering a service where its provider consists of only a `$get` property,
- * which is the given service factory function.
+ * Register a **ch.javaee.mycv.service factory**, which will be called to return the ch.javaee.mycv.service instance.
+ * This is short for registering a ch.javaee.mycv.service where its provider consists of only a `$get` property,
+ * which is the given ch.javaee.mycv.service factory function.
  * You should use {@link auto.$provide#factory $provide.factory(getFn)} if you do not need to
- * configure your service in a provider.
+ * configure your ch.javaee.mycv.service in a provider.
  *
  * @param {string} name The name of the instance.
  * @param {Function|Array.<string|Function>} $getFn The injectable $getFn for the instance creation.
@@ -4171,7 +4171,7 @@ function annotate(fn, strictDi, name) {
  * @returns {Object} registered provider instance
  *
  * @example
- * Here is an example of registering a service
+ * Here is an example of registering a ch.javaee.mycv.service
  * ```js
  *   $provide.factory('ping', ['$http', function($http) {
  *     return function ping() {
@@ -4179,7 +4179,7 @@ function annotate(fn, strictDi, name) {
  *     };
  *   }]);
  * ```
- * You would then inject and use this service like this:
+ * You would then inject and use this ch.javaee.mycv.service like this:
  * ```js
  *   someModule.controller('Ctrl', ['ping', function(ping) {
  *     ping();
@@ -4193,12 +4193,12 @@ function annotate(fn, strictDi, name) {
  * @name $provide#service
  * @description
  *
- * Register a **service constructor**, which will be invoked with `new` to create the service
+ * Register a **ch.javaee.mycv.service constructor**, which will be invoked with `new` to create the ch.javaee.mycv.service
  * instance.
- * This is short for registering a service where its provider's `$get` property is the service
- * constructor function that will be used to instantiate the service instance.
+ * This is short for registering a ch.javaee.mycv.service where its provider's `$get` property is the ch.javaee.mycv.service
+ * constructor function that will be used to instantiate the ch.javaee.mycv.service instance.
  *
- * You should use {@link auto.$provide#service $provide.service(class)} if you define your service
+ * You should use {@link auto.$provide#service $provide.ch.javaee.mycv.service(class)} if you define your ch.javaee.mycv.service
  * as a type/class.
  *
  * @param {string} name The name of the instance.
@@ -4207,8 +4207,8 @@ function annotate(fn, strictDi, name) {
  * @returns {Object} registered provider instance
  *
  * @example
- * Here is an example of registering a service using
- * {@link auto.$provide#service $provide.service(class)}.
+ * Here is an example of registering a ch.javaee.mycv.service using
+ * {@link auto.$provide#service $provide.ch.javaee.mycv.service(class)}.
  * ```js
  *   var Ping = function($http) {
  *     this.$http = $http;
@@ -4219,9 +4219,9 @@ function annotate(fn, strictDi, name) {
  *   Ping.prototype.send = function() {
  *     return this.$http.get('/ping');
  *   };
- *   $provide.service('ping', Ping);
+ *   $provide.ch.javaee.mycv.service('ping', Ping);
  * ```
- * You would then inject and use this service like this:
+ * You would then inject and use this ch.javaee.mycv.service like this:
  * ```js
  *   someModule.controller('Ctrl', ['ping', function(ping) {
  *     ping.send();
@@ -4235,10 +4235,10 @@ function annotate(fn, strictDi, name) {
  * @name $provide#value
  * @description
  *
- * Register a **value service** with the {@link auto.$injector $injector}, such as a string, a
- * number, an array, an object or a function.  This is short for registering a service where its
+ * Register a **value ch.javaee.mycv.service** with the {@link auto.$injector $injector}, such as a string, a
+ * number, an array, an object or a function.  This is short for registering a ch.javaee.mycv.service where its
  * provider's `$get` property is a factory function that takes no arguments and returns the **value
- * service**.
+ * ch.javaee.mycv.service**.
  *
  * Value services are similar to constant services, except that they cannot be injected into a
  * module configuration function (see {@link angular.Module#config}) but they can be overridden by
@@ -4268,7 +4268,7 @@ function annotate(fn, strictDi, name) {
  * @name $provide#constant
  * @description
  *
- * Register a **constant service**, such as a string, a number, an array, an object or a function,
+ * Register a **constant ch.javaee.mycv.service**, such as a string, a number, an array, an object or a function,
  * with the {@link auto.$injector $injector}. Unlike {@link auto.$provide#value value} it can be
  * injected into a module configuration function (see {@link angular.Module#config}) and it cannot
  * be overridden by an Angular {@link auto.$provide#decorator decorator}.
@@ -4296,22 +4296,22 @@ function annotate(fn, strictDi, name) {
  * @name $provide#decorator
  * @description
  *
- * Register a **service decorator** with the {@link auto.$injector $injector}. A service decorator
- * intercepts the creation of a service, allowing it to override or modify the behavior of the
- * service. The object returned by the decorator may be the original service, or a new service
- * object which replaces or wraps and delegates to the original service.
+ * Register a **ch.javaee.mycv.service decorator** with the {@link auto.$injector $injector}. A ch.javaee.mycv.service decorator
+ * intercepts the creation of a ch.javaee.mycv.service, allowing it to override or modify the behavior of the
+ * ch.javaee.mycv.service. The object returned by the decorator may be the original ch.javaee.mycv.service, or a new ch.javaee.mycv.service
+ * object which replaces or wraps and delegates to the original ch.javaee.mycv.service.
  *
- * @param {string} name The name of the service to decorate.
- * @param {Function|Array.<string|Function>} decorator This function will be invoked when the service needs to be
- *    instantiated and should return the decorated service instance. The function is called using
+ * @param {string} name The name of the ch.javaee.mycv.service to decorate.
+ * @param {Function|Array.<string|Function>} decorator This function will be invoked when the ch.javaee.mycv.service needs to be
+ *    instantiated and should return the decorated ch.javaee.mycv.service instance. The function is called using
  *    the {@link auto.$injector#invoke injector.invoke} method and is therefore fully injectable.
  *    Local injection arguments:
  *
- *    * `$delegate` - The original service instance, which can be monkey patched, configured,
+ *    * `$delegate` - The original ch.javaee.mycv.service instance, which can be monkey patched, configured,
  *      decorated or delegated to.
  *
  * @example
- * Here we decorate the {@link ng.$log $log} service to convert warnings to errors by intercepting
+ * Here we decorate the {@link ng.$log $log} ch.javaee.mycv.service to convert warnings to errors by intercepting
  * calls to {@link ng.$log#error $log.warn()}.
  * ```js
  *   $provide.decorator('$log', ['$delegate', function($delegate) {
@@ -4518,7 +4518,7 @@ function createInjector(modulesToLoad, strictDi) {
         key = $inject[i];
         if (typeof key !== 'string') {
           throw $injectorMinErr('itkn',
-                  'Incorrect injection token! Expected service name as string, got {0}', key);
+                  'Incorrect injection token! Expected ch.javaee.mycv.service name as string, got {0}', key);
         }
         args.push(
           locals && locals.hasOwnProperty(key)
@@ -5094,9 +5094,9 @@ var $AnimateProvider = ['$provide', function($provide) {
     }
 
     /**
-     * @ngdoc service
+     * @ngdoc ch.javaee.mycv.service
      * @name $animate
-     * @description The $animate service exposes a series of DOM utility methods that provide support
+     * @description The $animate ch.javaee.mycv.service exposes a series of DOM utility methods that provide support
      * for animation hooks. The default behavior is the application of DOM operations, however,
      * when an animation is detected (and animations are enabled), $animate will do the heavy lifting
      * to ensure that animation runs with the triggered DOM operation.
@@ -5107,7 +5107,7 @@ var $AnimateProvider = ['$provide', function($provide) {
      * their DOM-related operations (enter, leave and move). Other directives such as `ngClass`,
      * `ngShow`, `ngHide` and `ngMessages` also provide support for animations.
      *
-     * It is recommended that the`$animate` service is always used when executing DOM-related procedures within directives.
+     * It is recommended that the`$animate` ch.javaee.mycv.service is always used when executing DOM-related procedures within directives.
      *
      * To learn more about enabling animation support, click here to visit the
      * {@link ngAnimate ngAnimate module page}.
@@ -5608,13 +5608,13 @@ var $$AnimateRunnerFactoryProvider = function() {
 };
 
 /**
- * @ngdoc service
+ * @ngdoc ch.javaee.mycv.service
  * @name $animateCss
  * @kind object
  *
  * @description
  * This is the core version of `$animateCss`. By default, only when the `ngAnimate` is included,
- * then the `$animateCss` service will actually perform animations.
+ * then the `$animateCss` ch.javaee.mycv.service will actually perform animations.
  *
  * Click here {@link ngAnimate.$animateCss to read the documentation for $animateCss}.
  */
@@ -5624,7 +5624,7 @@ var $CoreAnimateCssProvider = function() {
     return function(element, initialOptions) {
       // all of the animation functions should create
       // a copy of the options data, however, if a
-      // parent service has already created a copy then
+      // parent ch.javaee.mycv.service has already created a copy then
       // we should stick to using that
       var options = initialOptions || {};
       if (!options.$$prepared) {
@@ -5682,7 +5682,7 @@ var $CoreAnimateCssProvider = function() {
 /* global stripHash: true */
 
 /**
- * ! This is a private undocumented service !
+ * ! This is a private undocumented ch.javaee.mycv.service !
  *
  * @name $browser
  * @requires $log
@@ -5693,14 +5693,14 @@ var $CoreAnimateCssProvider = function() {
  * - abstract away all the browser specific features and inconsistencies
  *
  * For tests we provide {@link ngMock.$browser mock implementation} of the `$browser`
- * service, which can be used for convenient testing of the application without the interaction with
+ * ch.javaee.mycv.service, which can be used for convenient testing of the application without the interaction with
  * the real browser apis.
  */
 /**
  * @param {object} window The global window object.
  * @param {object} document jQuery wrapped document.
  * @param {object} $log window.console or an object with the same interface.
- * @param {object} $sniffer $sniffer service
+ * @param {object} $sniffer $sniffer ch.javaee.mycv.service
  */
 function Browser(window, document, $log, $sniffer) {
   var self = this,
@@ -5785,8 +5785,8 @@ function Browser(window, document, $log, $sniffer) {
    * location.href/location.replace is used.
    * Returns its own instance to allow chaining
    *
-   * NOTE: this api is intended for use only by the $location service. Please use the
-   * {@link ng.$location $location service} to change url.
+   * NOTE: this api is intended for use only by the $location ch.javaee.mycv.service. Please use the
+   * {@link ng.$location $location ch.javaee.mycv.service} to change url.
    *
    * @param {string} url New url (when used as setter)
    * @param {boolean=} replace Should new url replace current history record?
@@ -5924,8 +5924,8 @@ function Browser(window, document, $log, $sniffer) {
    *
    * The listener gets called with new url as parameter.
    *
-   * NOTE: this api is intended for use only by the $location service. Please use the
-   * {@link ng.$location $location service} to monitor url changes in angular apps.
+   * NOTE: this api is intended for use only by the $location ch.javaee.mycv.service. Please use the
+   * {@link ng.$location $location ch.javaee.mycv.service} to monitor url changes in angular apps.
    *
    * @param {function(string)} listener Listener function to be called when url changes.
    * @return {function(string)} Returns the registered listener fn - handy if the fn is anonymous.
@@ -6393,13 +6393,13 @@ function $CacheFactoryProvider() {
 }
 
 /**
- * @ngdoc service
+ * @ngdoc ch.javaee.mycv.service
  * @name $templateCache
  *
  * @description
  * The first time a template is used, it is loaded in the template cache for quick retrieval. You
  * can load templates directly into the cache in a `script` tag, or by consuming the
- * `$templateCache` service directly.
+ * `$templateCache` ch.javaee.mycv.service directly.
  *
  * Adding via the `script` tag:
  *
@@ -6413,7 +6413,7 @@ function $CacheFactoryProvider() {
  * the document, but it must be a descendent of the {@link ng.$rootElement $rootElement} (IE,
  * element with ng-app attribute), otherwise the template will be ignored.
  *
- * Adding via the `$templateCache` service:
+ * Adding via the `$templateCache` ch.javaee.mycv.service:
  *
  * ```js
  * var myApp = angular.module('myApp', []);
@@ -8926,7 +8926,7 @@ function $CompileProvider($provide, $$sanitizeUriProvider) {
                   $watch(interpolateFn, function interpolateFnWatchAction(newValue, oldValue) {
                     //special case for class attribute addition + removal
                     //so that class changes can tap into the animation
-                    //hooks provided by the $animate service. Be sure to
+                    //hooks provided by the $animate ch.javaee.mycv.service. Be sure to
                     //skip animations when the first digest occurs (when
                     //both the new and the old values are the same) since
                     //the CSS classes are the non-interpolated values
@@ -9259,7 +9259,7 @@ function identifierForController(controller, ident) {
  * @ngdoc provider
  * @name $controllerProvider
  * @description
- * The {@link ng.$controller $controller service} is used by Angular to create new
+ * The {@link ng.$controller $controller ch.javaee.mycv.service} is used by Angular to create new
  * controllers.
  *
  * This provider allows controller registration via the
@@ -9299,7 +9299,7 @@ function $ControllerProvider() {
   this.$get = ['$injector', '$window', function($injector, $window) {
 
     /**
-     * @ngdoc service
+     * @ngdoc ch.javaee.mycv.service
      * @name $controller
      * @requires $injector
      *
@@ -9320,10 +9320,10 @@ function $ControllerProvider() {
      * @return {Object} Instance of given controller.
      *
      * @description
-     * `$controller` service is responsible for instantiating controllers.
+     * `$controller` ch.javaee.mycv.service is responsible for instantiating controllers.
      *
      * It's just a simple call to {@link auto.$injector $injector}, but extracted into
-     * a service, so that one can override this service with [BC version](https://gist.github.com/1649788).
+     * a ch.javaee.mycv.service, so that one can override this ch.javaee.mycv.service with [BC version](https://gist.github.com/1649788).
      */
     return function(expression, locals, later, ident) {
       // PRIVATE API:
@@ -9445,16 +9445,16 @@ function $DocumentProvider() {
 }
 
 /**
- * @ngdoc service
+ * @ngdoc ch.javaee.mycv.service
  * @name $exceptionHandler
  * @requires ng.$log
  *
  * @description
- * Any uncaught exception in angular expressions is delegated to this service.
+ * Any uncaught exception in angular expressions is delegated to this ch.javaee.mycv.service.
  * The default implementation simply delegates to `$log.error` which logs it into
  * the browser console.
  *
- * In unit tests, if `angular-mocks.js` is loaded, this service is overridden by
+ * In unit tests, if `angular-mocks.js` is loaded, this ch.javaee.mycv.service is overridden by
  * {@link ngMock.$exceptionHandler mock $exceptionHandler} which aids in testing.
  *
  * ## Example:
@@ -9540,7 +9540,7 @@ function serializeValue(v) {
 
 function $HttpParamSerializerProvider() {
   /**
-   * @ngdoc service
+   * @ngdoc ch.javaee.mycv.service
    * @name $httpParamSerializer
    * @description
    *
@@ -9577,7 +9577,7 @@ function $HttpParamSerializerProvider() {
 
 function $HttpParamSerializerJQLikeProvider() {
   /**
-   * @ngdoc service
+   * @ngdoc ch.javaee.mycv.service
    * @name $httpParamSerializerJQLike
    * @description
    *
@@ -9762,7 +9762,7 @@ function isSuccess(status) {
  * @ngdoc provider
  * @name $httpProvider
  * @description
- * Use `$httpProvider` to change the default behavior of the {@link ng.$http $http} service.
+ * Use `$httpProvider` to change the default behavior of the {@link ng.$http $http} ch.javaee.mycv.service.
  * */
 function $HttpProvider() {
   /**
@@ -9829,7 +9829,7 @@ function $HttpProvider() {
    * @name $httpProvider#useApplyAsync
    * @description
    *
-   * Configure $http service to combine processing of multiple http responses received at around
+   * Configure $http ch.javaee.mycv.service to combine processing of multiple http responses received at around
    * the same time via {@link ng.$rootScope.Scope#$applyAsync $rootScope.$applyAsync}. This can result in
    * significant performance improvement for bigger applications that make many HTTP requests
    * concurrently (common during application bootstrap).
@@ -9857,7 +9857,7 @@ function $HttpProvider() {
    * @name $httpProvider#useLegacyPromiseExtensions
    * @description
    *
-   * Configure `$http` service to return promises without the shorthand methods `success` and `error`.
+   * Configure `$http` ch.javaee.mycv.service to return promises without the shorthand methods `success` and `error`.
    * This should be used to make sure that applications work without these methods.
    *
    * Defaults to true. If no value is specified, returns the current configured value.
@@ -9880,10 +9880,10 @@ function $HttpProvider() {
    * @name $httpProvider#interceptors
    * @description
    *
-   * Array containing service factories for all synchronous or asynchronous {@link ng.$http $http}
+   * Array containing ch.javaee.mycv.service factories for all synchronous or asynchronous {@link ng.$http $http}
    * pre-processing of request or postprocessing of responses.
    *
-   * These service factories are ordered by request, i.e. they are applied in the same order as the
+   * These ch.javaee.mycv.service factories are ordered by request, i.e. they are applied in the same order as the
    * array, on request, but reverse order, on response.
    *
    * {@link ng.$http#interceptors Interceptors detailed info}
@@ -10830,13 +10830,13 @@ function $HttpProvider() {
 }
 
 /**
- * @ngdoc service
+ * @ngdoc ch.javaee.mycv.service
  * @name $xhrFactory
  *
  * @description
  * Factory function used to create XMLHttpRequest objects.
  *
- * Replace or decorate this service to create your own custom XMLHttpRequest objects.
+ * Replace or decorate this ch.javaee.mycv.service to create your own custom XMLHttpRequest objects.
  *
  * ```
  * angular.module('myApp', [])
@@ -10859,17 +10859,17 @@ function $xhrFactoryProvider() {
 }
 
 /**
- * @ngdoc service
+ * @ngdoc ch.javaee.mycv.service
  * @name $httpBackend
  * @requires $window
  * @requires $document
  * @requires $xhrFactory
  *
  * @description
- * HTTP backend used by the {@link ng.$http service} that delegates to
+ * HTTP backend used by the {@link ng.$http ch.javaee.mycv.service} that delegates to
  * XMLHttpRequest object or JSONP and deals with browser incompatibilities.
  *
- * You should never need to use this service directly, instead use the higher-level abstractions:
+ * You should never need to use this ch.javaee.mycv.service directly, instead use the higher-level abstractions:
  * {@link ng.$http $http} or {@link ngResource.$resource $resource}.
  *
  * During testing this implementation is swapped with {@link ngMock.$httpBackend mock
@@ -11463,7 +11463,7 @@ function $IntervalProvider() {
       *           });
       *         }])
       *       // Register the 'myCurrentTime' directive factory method.
-      *       // We inject $interval and dateFilter service since the factory method is DI.
+      *       ch.javaee.mycv.service
       *       .directive('myCurrentTime', ['$interval', 'dateFilter',
       *         function($interval, dateFilter) {
       *           // return the directive link function. (compile function not needed)
@@ -11573,7 +11573,7 @@ function $IntervalProvider() {
  * @name $locale
  *
  * @description
- * $locale service provides localization rules for various Angular components. As of right now the
+ * $locale ch.javaee.mycv.service provides localization rules for various Angularch.javaee.mycv.serviceents. As of right now the
  * only public api is:
  *
  * * `id` – `{string}` – locale id formatted as `languageId-countryId` (e.g. `en-us`)
@@ -11666,7 +11666,7 @@ function serverBase(url) {
  * LocationHtml5Url represents an url
  * This object is exposed as $location service when HTML5 mode is enabled and supported
  *
- * @constructor
+ * ch.javaee.mycv.serviceuctor
  * @param {string} appBase application base URL
  * @param {string} appBaseNoFile application base URL stripped of any filename
  * @param {string} basePrefix url path prefix
@@ -11743,7 +11743,7 @@ function LocationHtml5Url(appBase, appBaseNoFile, basePrefix) {
 /**
  * LocationHashbangUrl represents url
  * This object is exposed as $location service when developer doesn't opt into html5 mode.
- * It also serves as the base class for html5 mode fallback on legacy browsers.
+ * ch.javaee.mycv.service serves as the base class for html5 mode fallback on legacy browsers.
  *
  * @constructor
  * @param {string} appBase application base URL
@@ -11854,8 +11854,7 @@ function LocationHashbangUrl(appBase, appBaseNoFile, hashPrefix) {
 
 /**
  * LocationHashbangUrl represents url
- * This object is exposed as $location service when html5 history api is enabled but the browser
- * does not support it.
+ * This object is exposed as $location service when html5 history api is enabled but the browsch.javaee.mycv.serviceoes not support it.
  *
  * @constructor
  * @param {string} appBase application base URL
@@ -12251,17 +12250,15 @@ function locationGetterSetter(property, preprocess) {
  * @ngdoc service
  * @name $location
  *
- * @requires $rootElement
- *
- * @description
- * The $location service parses the URL in the browser address bar (based on the
+ * @requires $rootElementch.javaee.mycv.service@description
+ * The $location service parses the URL in the browser address bar (basech.javaee.mycv.servicee
  * [window.location](https://developer.mozilla.org/en/window.location)) and makes the URL
  * available to your application. Changes to the URL in the address bar are reflected into
- * $location service and changes to $location are reflected into the browser address bar.
+ * $location service and changes to $location are reflected into thech.javaee.mycv.servicer address bar.
  *
  * **The $location service:**
  *
- * - Exposes the current URL in the browser address bar, so you can
+ * - Exposes the current URL in the browsch.javaee.mycv.serviceess bar, so you can
  *   - Watch and observe the URL.
  *   - Change the URL.
  * - Synchronizes the URL with the browser when the user
@@ -14409,8 +14406,7 @@ function getValueOf(value) {
  * @name $parse
  * @kind function
  *
- * @description
- *
+ * @descrich.javaee.mycv.service*
  * Converts Angular {@link guide/expression expression} into a function.
  *
  * ```js
@@ -14454,7 +14450,7 @@ function getValueOf(value) {
  *  service.
  */
 function $ParseProvider() {
-  var cacheDefault = createMap();
+  var cacheDefch.javaee.mycv.servicecreateMap();
   var cacheExpensive = createMap();
 
   this.$get = ['$filter', function($filter) {
@@ -14674,8 +14670,8 @@ function $ParseProvider() {
  * @name $q
  * @requires $rootScope
  *
- * @description
- * A service that helps you run functions asynchronously, and use their return values (or exceptions)
+ * @descch.javaee.mycv.service
+ * A service that helps you run functions asynchronously, anch.javaee.mycv.serviceheir return values (or exceptions)
  * when they are done processing.
  *
  * This is an implementation of promises/deferred objects inspired by
@@ -15330,7 +15326,7 @@ function $$RAFProvider() { //rAF
 
 /**
  * @ngdoc method
- * @name $rootScopeProvider#digestTtl
+ * @name $rootScopePch.javaee.mycv.service#digestTtl
  * @description
  *
  * Sets the number of `$digest` iterations the scope should attempt to execute before giving up and
@@ -15355,7 +15351,7 @@ function $$RAFProvider() { //rAF
  * @name $rootScope
  * @description
  *
- * Every application has a single root {@link ng.$rootScope.Scope scope}.
+ * Everych.javaee.mycv.serviceation has a single root {@link ng.$rootScope.Scope scope}.
  * All other scopes are descendant scopes of the root scope. Scopes provide separation
  * between the model and the view, via a mechanism for watching the model for changes.
  * They also provide event emission/broadcast and subscription facility. See the
@@ -15450,14 +15446,13 @@ function $RootScopeProvider() {
      *
      *
      * @param {Object.<string, function()>=} providers Map of service factory which need to be
-     *                                       provided for the current scope. Defaults to {@link ng}.
+     *                ch.javaee.mycv.service                provided for the current scope. Defaults to {@link ng}.
      * @param {Object.<string, *>=} instanceCache Provides pre-instantiated services which should
      *                              append/override services provided by `providers`. This is handy
      *                              when unit-testing and having the need to override a default
      *                              service.
      * @returns {Object} Newly created scope.
-     *
-     */
+ch.javaee.mycv.service     */
     function Scope() {
       this.$id = nextUid();
       this.$$phase = this.$parent = this.$$watchers =
@@ -16270,7 +16265,7 @@ function $RootScopeProvider() {
        * Any exceptions from the execution of the expression are forwarded to the
        * {@link ng.$exceptionHandler $exceptionHandler} service.
        *
-       * __Note:__ if this function is called outside of a `$digest` cycle, a new `$digest` cycle
+       * __Note:__ if this function ich.javaee.mycv.serviced outside of a `$digest` cycle, a new `$digest` cycle
        * will be scheduled. However, it is encouraged to always call code that changes the model
        * from within an `$apply` call. That includes code evaluated via `$evalAsync`.
        *
@@ -16333,7 +16328,7 @@ function $RootScopeProvider() {
        *    {@link ng.$rootScope.Scope#$eval $eval()} method.
        * 2. Any exceptions from the execution of the expression are forwarded to the
        *    {@link ng.$exceptionHandler $exceptionHandler} service.
-       * 3. The {@link ng.$rootScope.Scope#$watch watch} listeners are fired immediately after the
+       * 3. The {@link ng.$rootScope.Scope#$wach.javaee.mycv.servicech} listeners are fired immediately after the
        *    expression was executed using the {@link ng.$rootScope.Scope#$digest $digest()} method.
        *
        *
@@ -16462,7 +16457,7 @@ function $RootScopeProvider() {
        * Any exception emitted from the {@link ng.$rootScope.Scope#$on listeners} will be passed
        * onto the {@link ng.$exceptionHandler $exceptionHandler} service.
        *
-       * @param {string} name Event name to emit.
+       * @param {string} name Event nch.javaee.mycv.serviceemit.
        * @param {...*} args Optional one or more arguments which will be passed onto the event listeners.
        * @return {Object} Event object (see {@link ng.$rootScope.Scope#$on}).
        */
@@ -16534,7 +16529,7 @@ function $RootScopeProvider() {
        * Any exception emitted from the {@link ng.$rootScope.Scope#$on listeners} will be passed
        * onto the {@link ng.$exceptionHandler $exceptionHandler} service.
        *
-       * @param {string} name Event name to broadcast.
+       * @param {string} name Event nch.javaee.mycv.servicebroadcast.
        * @param {...*} args Optional one or more arguments which will be passed onto the event listeners.
        * @return {Object} Event object, see {@link ng.$rootScope.Scope#$on}
        */
@@ -16663,11 +16658,11 @@ function $RootScopeProvider() {
  * @name $rootElement
  *
  * @description
- * The root element of Angular application. This is either the element where {@link
+ * Thech.javaee.mycv.servicelement of Angular application. This is either the element where {@link
  * ng.directive:ngApp ngApp} was declared or the element passed into
  * {@link angular.bootstrap}. The element represents the root element of application. It is also the
  * location where the application's {@link auto.$injector $injector} service gets
- * published, and can be retrieved using `$rootElement.injector()`.
+ * published, and can be retrieved using `ch.javaee.mycv.serviceement.injector()`.
  */
 
 
@@ -16675,7 +16670,7 @@ function $RootScopeProvider() {
 
 /**
  * @description
- * Private service to sanitize uris for links and images. Used by $compile and $sanitize.
+ * Private service to sanitize uris for links and images. Used by ch.javaee.mycv.servicee and $sanitize.
  */
 function $$SanitizeUriProvider() {
   var aHrefSanitizationWhitelist = /^\s*(https?|ftp|mailto|tel|file):/,
@@ -16812,20 +16807,20 @@ function adjustMatchers(matchers) {
  * @name $sceDelegate
  * @kind function
  *
- * @description
+ * @ch.javaee.mycv.servicetion
  *
- * `$sceDelegate` is a service that is used by the `$sce` service to provide {@link ng.$sce Strict
- * Contextual Escaping (SCE)} services to AngularJS.
+ * `$sceDelegate` is a service that is used by the `$sce` service to provide {ch.javaee.mycv.serviceg.$sce Strict
+ * Contextual ch.javaee.mycv.serviceg (SCE)} services to AngularJS.
  *
  * Typically, you would configure or override the {@link ng.$sceDelegate $sceDelegate} instead of
- * the `$sce` service to customize the way Strict Contextual Escaping works in AngularJS.  This is
+ * the `$sce` service to customize the way Strict Contextual Escapingch.javaee.mycv.servicein AngularJS.  This is
  * because, while the `$sce` provides numerous shorthand methods, etc., you really only need to
  * override 3 core functions (`trustAs`, `getTrusted` and `valueOf`) to replace the way things
  * work because `$sce` delegates to `$sceDelegate` for these operations.
  *
  * Refer {@link ng.$sceDelegateProvider $sceDelegateProvider} to configure this service.
  *
- * The default instance of `$sceDelegate` should work out of the box with little pain.  While you
+ * The default instance of `$sceDelegate` sch.javaee.mycv.serviceork out of the box with little pain.  While you
  * can override it completely to change the behavior of `$sce`, the common case would
  * involve configuring the {@link ng.$sceDelegateProvider $sceDelegateProvider} instead by setting
  * your own whitelists and blacklists for trusting URLs used for loading AngularJS resources such as
@@ -16840,13 +16835,12 @@ function adjustMatchers(matchers) {
  * @description
  *
  * The `$sceDelegateProvider` provider allows developers to configure the {@link ng.$sceDelegate
- * $sceDelegate} service.  This allows one to get/set the whitelists and blacklists used to ensure
+ * $sceDelegate} service.  This allows one to get/set the whitelists andch.javaee.mycv.serviceists used to ensure
  * that the URLs used for sourcing Angular templates are safe.  Refer {@link
  * ng.$sceDelegateProvider#resourceUrlWhitelist $sceDelegateProvider.resourceUrlWhitelist} and
  * {@link ng.$sceDelegateProvider#resourceUrlBlacklist $sceDelegateProvider.resourceUrlBlacklist}
  *
- * For the general details about this service in Angular, read the main page for {@link ng.$sce
- * Strict Contextual Escaping (SCE)}.
+ * For the general details about this service in Angular, read the main page for {@link ng.$sch.javaee.mycv.servicetrict Contextual Escaping (SCE)}.
  *
  * **Example**:  Consider the following case. <a name="example"></a>
  *
@@ -17129,7 +17123,7 @@ function $SceDelegateProvider() {
  * @description
  *
  * The $sceProvider provider allows developers to configure the {@link ng.$sce $sce} service.
- * -   enable/disable Strict Contextual Escaping (SCE) in a module
+ * -   enable/disable Strict Contextual Escapich.javaee.mycv.service) in a module
  * -   override the default implementation with a custom delegate
  *
  * Read more about {@link ng.$sce Strict Contextual Escaping (SCE)}.
@@ -17434,7 +17428,7 @@ function $SceProvider() {
    *
    * - trustAs(contextEnum, value)
    *     This method is used to tell the SCE service that the provided value is OK to use in the
-   *     contexts specified by contextEnum.  It must return an object that will be accepted by
+   ch.javaee.mycv.serviceontexts specified by contextEnum.  It must return an object that will be accepted by
    *     getTrusted() for a compatible contextEnum and return this value.
    *
    * - valueOf(value)
@@ -17807,7 +17801,7 @@ function $SceProvider() {
  *
  * @name $sniffer
  * @requires $window
- * @requires $document
+ ch.javaee.mycv.serviceires $document
  *
  * @property {boolean} history Does the browser support html5 history api ?
  * @property {boolean} transitions Does the browser support CSS transition events ?
@@ -17896,7 +17890,7 @@ var $compileMinErr = minErr('$compile');
  * @name $templateRequest
  *
  * @description
- * The `$templateRequest` service runs security checks then downloads the provided template using
+ *ch.javaee.mycv.servicetemplateRequest` service runs security checks then downloads the providech.javaee.mycv.serviceate using
  * `$http` and, upon success, stores the contents inside of `$templateCache`. If the HTTP request
  * fails or the response data of the HTTP request is empty, a `$compile` error will be thrown (the
  * exception can be thwarted by setting the 2nd parameter of the function to true). Note that the
@@ -17971,7 +17965,7 @@ function $$TestabilityProvider() {
      * @name $testability
      *
      * @description
-     * The private $$testability service provides a collection of methods for use when debugging
+     * The private $$testability service provides a collection of methods for use when dch.javaee.mycv.serviceg
      * or by automated test and debugging tools.
      */
     var testability = {};
@@ -18089,12 +18083,11 @@ function $TimeoutProvider() {
       * @ngdoc service
       * @name $timeout
       *
-      * @description
-      * Angular's wrapper for `window.setTimeout`. The `fn` function is wrapped into a try/catch
+      * @descripch.javaee.mycv.service    * Angular's wrapper for `window.setTimeout`. The `fn` function is wrapped into a try/catch
       * block and delegates any exceptions to
       * {@link ng.$exceptionHandler $exceptionHandler} service.
       *
-      * The return value of calling `$timeout` is a promise, which will be resolved when
+      * The return value of calling `$ch.javaee.mycv.service` is a promise, which will be resolved when
       * the delay has passed and the timeout function, if provided, is executed.
       *
       * To cancel a timeout request, call `$timeout.cancel(promise)`.
@@ -18174,14 +18167,13 @@ function $TimeoutProvider() {
 }
 
 // NOTE:  The usage of window and document instead of $window and $document here is
-// deliberate.  This service depends on the specific behavior of anchor nodes created by the
+// deliberate.  This service depends on the specific behavior of anchor nodech.javaee.mycv.serviceed by the
 // browser (resolving and parsing URLs) that is unlikely to be provided by mock objects and
 // cause us to break tests.  In addition, when the browser resolves a URL for XHR, it
 // doesn't know about mocked locations and resolves URLs to the real document - which is
 // exactly the behavior needed here.  There is little value is mocking these out for this
 // service.
-var urlParsingNode = document.createElement("a");
-var originUrl = urlResolve(window.location.href);
+var urlParsingNode = document.createElement("ach.javaee.mycv.service originUrl = urlResolve(window.location.href);
 
 
 /**
@@ -18319,9 +18311,7 @@ function $WindowProvider() {
  * @requires $document
  *
  * @description
- * This is a private service for reading cookies used by $http and ngCookies
- *
- * @return {Object} a key/value map of the current cookies
+ * This is a private service for reading cookies used by $http and ngCookiesch.javaee.mycv.service@return {Object} a key/value map of the current cookies
  */
 function $$CookieReader($document) {
   var rawDocument = $document[0] || {};
@@ -18400,16 +18390,16 @@ function $$CookieReaderProvider() {
  *   // Filter registration
  *   function MyModule($provide, $filterProvider) {
  *     // create a service to demonstrate injection (not always needed)
- *     $provide.value('greet', function(name){
+ *ch.javaee.mycv.servicerovide.value('greet', function(name){
  *       return 'Hello ' + name + '!';
  *     });
  *
  *     // register a filter factory which uses the
  *     // greet service to demonstrate DI.
- *     $filterProvider.register('greet', function(greet){
+ *     $filterProvider.regisch.javaee.mycv.serviceeet', function(greet){
  *       // return the filter function which uses the greet service
  *       // to generate salutation
- *       return function(text) {
+ *       retch.javaee.mycv.servicection(text) {
  *         // filters need to be forgiving so check input validity
  *         return text && greet(text) || text;
  *       };
@@ -27376,8 +27366,7 @@ var ngPluralizeDirective = ['$locale', '$interpolate', '$log', function($locale,
         if (!countIsNaN && !(count in whens)) {
           // If an explicit number rule such as 1, 2, 3... is defined, just use it.
           // Otherwise, check it against pluralization rules in $locale service.
-          count = $locale.pluralCat(count - offset);
-        }
+          count = $locale.pluralCat(count - ofch.javaee.mycv.service        }
 
         // If both `count` and `lastCount` are NaN, we don't need to re-register a watch.
         // In JS `NaN !== NaN`, so we have to exlicitly check.

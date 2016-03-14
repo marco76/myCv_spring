@@ -2,7 +2,7 @@ package ch.javaee.mycv.rest;
 
 import ch.javaee.mycv.model.Visitor;
 import org.bson.Document;
-import service.CvService;
+import ch.javaee.mycv.service.CvService;
 
 import javax.ejb.EJB;
 import javax.servlet.http.HttpServletRequest;

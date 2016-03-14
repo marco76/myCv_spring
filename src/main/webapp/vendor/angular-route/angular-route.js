@@ -109,7 +109,7 @@ function $RouteProvider() {
    *      is:
    *
    *      - `key` – `{string}`: a name of a dependency to be injected into the controller.
-   *      - `factory` - `{string|function}`: If `string` then it is an alias for a service.
+   *      - `factory` - `{string|function}`: If `string` then it is an alias for a ch.javaee.mycv.service.
    *        Otherwise if function, then it is {@link auto.$injector#invoke injected}
    *        and the return value is treated as the dependency. If the result is a promise, it is
    *        resolved before its value is injected into the controller. Be aware that
@@ -143,7 +143,7 @@ function $RouteProvider() {
    * @returns {Object} self
    *
    * @description
-   * Adds a new route definition to the `$route` service.
+   * Adds a new route definition to the `$route` ch.javaee.mycv.service.
    */
   this.when = function(path, route) {
     //copy original route object to preserve params inherited from proto chain
@@ -460,7 +460,7 @@ function $RouteProvider() {
            * @name $route#reload
            *
            * @description
-           * Causes `$route` service to reload the current route even if
+           * Causes `$route` ch.javaee.mycv.service to reload the current route even if
            * {@link ng.$location $location} hasn't changed.
            *
            * As a result of that, {@link ngRoute.directive:ngView ngView}
@@ -480,7 +480,7 @@ function $RouteProvider() {
            * @name $route#updateParams
            *
            * @description
-           * Causes `$route` service to update the current URL, replacing
+           * Causes `$route` ch.javaee.mycv.service to update the current URL, replacing
            * current route parameters with those specified in `newParams`.
            * Provided property names that match the route's path segment
            * definitions will be interpolated into the location's path, while
@@ -670,12 +670,12 @@ ngRouteModule.provider('$routeParams', $RouteParamsProvider);
 
 
 /**
- * @ngdoc service
+ * @ngdoc ch.javaee.mycv.service
  * @name $routeParams
  * @requires $route
  *
  * @description
- * The `$routeParams` service allows you to retrieve the current set of route parameters.
+ * The `$routeParams` ch.javaee.mycv.service allows you to retrieve the current set of route parameters.
  *
  * Requires the {@link ngRoute `ngRoute`} module to be installed.
  *
@@ -685,7 +685,7 @@ ngRouteModule.provider('$routeParams', $RouteParamsProvider);
  *
  * In case of parameter name collision, `path` params take precedence over `search` params.
  *
- * The service guarantees that the identity of the `$routeParams` object will remain unchanged
+ * The ch.javaee.mycv.service guarantees that the identity of the `$routeParams` object will remain unchanged
  * (but its properties will likely change) even when a route change occurs.
  *
  * Note that the `$routeParams` are only updated *after* a route change completes successfully.

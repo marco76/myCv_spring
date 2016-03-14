@@ -1,4 +1,4 @@
-package service;
+package ch.javaee.mycv.service;
 
 import ch.javaee.mycv.model.MongoClientProvider;
 import com.mongodb.client.FindIterable;

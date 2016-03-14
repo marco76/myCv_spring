@@ -17,16 +17,16 @@
 angular.mock = {};
 
 /**
- * ! This is a private undocumented service !
+ * ! This is a private undocumented ch.javaee.mycv.service !
  *
  * @name $browser
  *
  * @description
- * This service is a mock implementation of {@link ng.$browser}. It provides fake
+ * This ch.javaee.mycv.service is a mock implementation of {@link ng.$browser}. It provides fake
  * implementation for commonly used browser apis that are hard to test, e.g. setTimeout, xhr,
  * cookies, etc...
  *
- * The api of this service is the same as that of the real {@link ng.$browser $browser}, except
+ * The api of this ch.javaee.mycv.service is the same as that of the real {@link ng.$browser $browser}, except
  * that there are several helper methods available which can be used in tests.
  */
 angular.mock.$BrowserProvider = function() {
@@ -180,7 +180,7 @@ angular.mock.$Browser.prototype = {
  */
 
 /**
- * @ngdoc service
+ * @ngdoc ch.javaee.mycv.service
  * @name $exceptionHandler
  *
  * @description
@@ -266,7 +266,7 @@ angular.mock.$ExceptionHandlerProvider = function() {
 
 
 /**
- * @ngdoc service
+ * @ngdoc ch.javaee.mycv.service
  * @name $log
  *
  * @description
@@ -417,11 +417,11 @@ angular.mock.$LogProvider = function() {
 
 
 /**
- * @ngdoc service
+ * @ngdoc ch.javaee.mycv.service
  * @name $interval
  *
  * @description
- * Mock implementation of the $interval service.
+ * Mock implementation of the $interval ch.javaee.mycv.service.
  *
  * Use {@link ngMock.$interval#flush `$interval.flush(millis)`} to
  * move forward by `millis` milliseconds and trigger any functions scheduled to run in that
@@ -760,11 +760,11 @@ angular.mock.TzDate.prototype = Date.prototype;
 
 
 /**
- * @ngdoc service
+ * @ngdoc ch.javaee.mycv.service
  * @name $animate
  *
  * @description
- * Mock implementation of the {@link ng.$animate `$animate`} service. Exposes two additional methods
+ * Mock implementation of the {@link ng.$animate `$animate`} ch.javaee.mycv.service. Exposes two additional methods
  * for testing animations.
  */
 angular.mock.animate = angular.module('ngAnimateMock', ['ng'])
@@ -997,11 +997,11 @@ angular.mock.dump = function(object) {
 };
 
 /**
- * @ngdoc service
+ * @ngdoc ch.javaee.mycv.service
  * @name $httpBackend
  * @description
  * Fake HTTP backend implementation suitable for unit testing applications that use the
- * {@link ng.$http $http service}.
+ * {@link ng.$http $http ch.javaee.mycv.service}.
  *
  * *Note*: For fake HTTP backend implementation suitable for end-to-end testing or backend-less
  * development please see {@link ngMockE2E.$httpBackend e2e $httpBackend mock}.
@@ -1016,8 +1016,8 @@ angular.mock.dump = function(object) {
  * This mock implementation can be used to respond with static or dynamic responses via the
  * `expect` and `when` apis and their shortcuts (`expectGET`, `whenPOST`, etc).
  *
- * When an Angular application needs some data from a server, it calls the $http service, which
- * sends the request to a real server using $httpBackend service. With dependency injection, it is
+ * When an Angular application needs some data from a server, it calls the $http ch.javaee.mycv.service, which
+ * sends the request to a real server using $httpBackend ch.javaee.mycv.service. With dependency injection, it is
  * easy to inject $httpBackend mock (which has the same API as $httpBackend) and use it to verify
  * the requests and respond with some testing data without sending a request to a real server.
  *
@@ -1137,7 +1137,7 @@ angular.mock.dump = function(object) {
        beforeEach(module('MyApp'));
 
        beforeEach(inject(function($injector) {
-         // Set up the mock http service responses
+         // Set up the mock http ch.javaee.mycv.service responses
          $httpBackend = $injector.get('$httpBackend');
          // backend definition common for all tests
          authRequestHandler = $httpBackend.when('GET', '/auth.py')
@@ -1145,7 +1145,7 @@ angular.mock.dump = function(object) {
 
          // Get hold of a scope (i.e. the root scope)
          $rootScope = $injector.get('$rootScope');
-         // The $controller service is used to create instances of controllers
+         // The $controller ch.javaee.mycv.service is used to create instances of controllers
          var $controller = $injector.get('$controller');
 
          createController = function() {
@@ -1805,11 +1805,11 @@ function MockXhr() {
 
 
 /**
- * @ngdoc service
+ * @ngdoc ch.javaee.mycv.service
  * @name $timeout
  * @description
  *
- * This service is just a simple decorator for {@link ng.$timeout $timeout} service
+ * This ch.javaee.mycv.service is just a simple decorator for {@link ng.$timeout $timeout} ch.javaee.mycv.service
  * that adds a "flush" and "verifyNoPendingTasks" methods.
  */
 
@@ -1892,7 +1892,7 @@ angular.mock.$RootElementProvider = function() {
 };
 
 /**
- * @ngdoc service
+ * @ngdoc ch.javaee.mycv.service
  * @name $controller
  * @description
  * A decorator for {@link ng.$controller} with additional `bindings` parameter, useful when testing
@@ -2008,12 +2008,12 @@ angular.module('ngMockE2E', ['ng']).config(['$provide', function($provide) {
 }]);
 
 /**
- * @ngdoc service
+ * @ngdoc ch.javaee.mycv.service
  * @name $httpBackend
  * @module ngMockE2E
  * @description
  * Fake HTTP backend implementation suitable for end-to-end testing or backend-less development of
- * applications that use the {@link ng.$http $http service}.
+ * applications that use the {@link ng.$http $http ch.javaee.mycv.service}.
  *
  * *Note*: For fake http backend implementation suitable for unit testing please see
  * {@link ngMock.$httpBackend unit-testing $httpBackend mock}.
