@@ -12,7 +12,8 @@ angular.module('myApp.view1', ['ngRoute'])
 }])
 
 .controller('View1Ctrl', ['$scope', '$routeParams', '$http','$sce', function($scope, $routeParams, $http,$sce) {
-  $http.get("/rest/cv/user").success(function (data) {
+   var selectedUser = "marco";
+    $http.get("/rest/cv/user/"+selectedUser).success(function (data) {
       $scope.profile = data;
       $scope.certifications = $sce.trustAsHtml(data.certifications);
       $scope.opensource = $sce.trustAsHtml(data.opensource);
