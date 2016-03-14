@@ -19,7 +19,7 @@ public class CvService {
     MongoClientProvider mongoClientProvider;
 
     public String getCvByUser(String username) {
-        MongoDatabase database = mongoClientProvider.getMongoClient().getDatabase("myCv");
+        MongoDatabase database = mongoClientProvider.getMongoClient().getDatabase("mycv");
         MongoCollection collection = database.getCollection("cv");
         FindIterable<Document> iterable = collection.find(new Document("user", username));
 
@@ -30,7 +30,7 @@ public class CvService {
     }
 
     public void saveVisitor(Document visitor) {
-        MongoDatabase database = mongoClientProvider.getMongoClient().getDatabase("myCv");
+        MongoDatabase database = mongoClientProvider.getMongoClient().getDatabase("mycv");
         database.getCollection("visitor").insertOne(visitor);
 
     }
