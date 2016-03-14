@@ -23,7 +23,7 @@ public class MongoClientProvider {
 
     @PostConstruct
     public void init() {
-        if (System.getenv("OPENSHIFT_MONGODB_DB_URL") == null){
+        if (System.getenv("OPENSHIFT_MONGODB_DB_URL") == null){ // Openshift URL
             mongoClient = new MongoClient();
         }
         else {

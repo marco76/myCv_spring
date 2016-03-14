@@ -18,9 +18,14 @@ public class CvService {
     @EJB
     MongoClientProvider mongoClientProvider;
 
+
+    public static String DB_CV = "mycv";
+    public static String DB_COLL_CV = "cv";
+    public static String DB_COLL_VISITOR = "visitor";
+
     public String getCvByUser(String username) {
-        MongoDatabase database = mongoClientProvider.getMongoClient().getDatabase("mycv");
-        MongoCollection collection = database.getCollection("cv");
+        MongoDatabase database = mongoClientProvider.getMongoClient().getDatabase(DB_CV);
+        MongoCollection collection = database.getCollection(DB_COLL_CV);
         FindIterable<Document> iterable = collection.find(new Document("user", username));
 
         if (iterable.first() != null) {
@@ -30,8 +35,8 @@ public class CvService {
     }
 
     public void saveVisitor(Document visitor) {
-        MongoDatabase database = mongoClientProvider.getMongoClient().getDatabase("mycv");
-        database.getCollection("visitor").insertOne(visitor);
+        MongoDatabase database = mongoClientProvider.getMongoClient().getDatabase(DB_CV);
+        database.getCollection(DB_COLL_VISITOR).insertOne(visitor);
 
     }
 }
