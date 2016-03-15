@@ -9,6 +9,11 @@ angular.module('myApp.view2', ['ngRoute'])
   });
 }])
 
-.controller('View2Ctrl', [function() {
-
-}]);
+    .controller('View2Ctrl', ['$scope', '$routeParams', '$http','$sce', function($scope, $routeParams, $http,$sce) {
+      var selectedUser = "marco";
+      $http.get("/rest/access/").success(function (data) {
+        $scope.profile = data;
+        $scope.certifications = $sce.trustAsHtml(data.certifications);
+        $scope.opensource = $sce.trustAsHtml(data.opensource);
+      });
+    }]);
