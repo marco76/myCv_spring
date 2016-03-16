@@ -3,7 +3,7 @@
 angular.module('myApp.view1', ['ngRoute', 'ngSanitize'])
 
 .config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('#marco', {
+  $routeProvider.when('/marco', {
     templateUrl: 'view1/view1.html',
     controller: 'View1Ctrl',
     css: ['view1/reset-font-grids.css','view1/resume.css']
