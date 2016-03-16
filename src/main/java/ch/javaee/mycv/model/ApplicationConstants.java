@@ -9,4 +9,5 @@ public class ApplicationConstants {
     public static String DB_APP_DATA="appData";
     public static String DB_COLL_CV = "cv";
     public static String DB_COLL_VISITOR = "visitor";
+    public static String DB_COLL_ARTICLE="article";
 }

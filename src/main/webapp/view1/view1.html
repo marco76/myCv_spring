@@ -1,3 +1,5 @@
+    <link  rel="stylesheet" property="stylesheet" href="view1/reset-font-grids.css" />
+<link rel="stylesheet" property="stylesheet" href="view1/resume.css" />
 <div id="doc2" class="yui-t7" ng-cloak>
     <div id="inner" class="inner-border">
         <div id="hd">
@@ -12,6 +14,7 @@
                               <a target="_blank" href="{{profile.social_links.linkedin}}" style="text-decoration: initial;">
                             <img src="media/linkedin-3-16.png"/>
                         </a>
+
                         <a href="mailto:moltenma@gmail.com" title="moltenma@gmail.com">
                             <img src="media/mail-16.png" style="width: 16px; height: 16px"/></a>
                         <a target="_blank" href="http://javaee.ch" style="text-decoration: initial;">
@@ -114,7 +117,7 @@
                             <h2>Open Source</h2>
                         </div>
                         <div class="yui-u">
-                            <div ng-bind-html="opensource"></div>
+                        <div ng-bind-html="profile.opensource"></div>
                         </div>
                     </div><!--// .yui-gf -->
                     <div class="yui-gf">
@@ -131,7 +134,7 @@
                             <h2>Still learning (past 3 y.)</h2>
                         </div>
                         <div class="yui-u">
-                          <div ng-bind-html="certifications"></div>
+                          <div ng-bind-html="profile.certifications"></div>
                         </div>
                         </div>
                     </div><!--// .yui-gf -->
@@ -150,8 +153,6 @@
             </div><!--// yui-main -->
         </div><!--// bd -->
 
-        <div id="ft" class="no-print">
-            <p>Website developed by Marco Molteni hosted by <a href="http://www.openshift.com">OpenShift</a>. Built using Java EE, AngularJS, JSON, MongoDB, CSS3 </p>
-        </div><!--// footer -->
+
     </div><!-- // inner -->
 </div><!--// doc -->

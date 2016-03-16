@@ -1,6 +1,6 @@
 /**
- * @license AngularJS v1.4.9
- * (c) 2010-2015 Google, Inc. http://angularjs.org
+ * @license AngularJS v1.5.0
+ * (c) 2010-2016 Google, Inc. http://angularjs.org
  * License: MIT
  */
 
@@ -87,7 +87,7 @@ function minErr(module, ErrorConstructor) {
       return match;
     });
 
-    message += '\nhttp://errors.angularjs.org/1.4.9/' +
+    message += '\nhttp://errors.angularjs.org/1.5.0/' +
       (module ? module + '/' : '') + code;
 
     for (i = SKIP_INDEXES, paramPrefix = '?'; i < templateArgs.length; i++, paramPrefix = '&') {
@@ -150,7 +150,7 @@ function setupModuleLoader(window) {
      * // Create a new module
      * var myModule = angular.module('myModule', []);
      *
-     * // register a new ch.javaee.mycv.service
+     * // register a new service
      * myModule.value('appName', 'MyCoolApp');
      *
      * // configure existing services inside initialization blocks.
@@ -239,9 +239,9 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#provider
            * @module ng
-           * @param {string} name ch.javaee.mycv.service name
+           * @param {string} name service name
            * @param {Function} providerType Construction function for creating new instance of the
-           *                                ch.javaee.mycv.service.
+           *                                service.
            * @description
            * See {@link auto.$provide#provider $provide.provider()}.
            */
@@ -251,8 +251,8 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#factory
            * @module ng
-           * @param {string} name ch.javaee.mycv.service name
-           * @param {Function} providerFunction Function for creating new instance of the ch.javaee.mycv.service.
+           * @param {string} name service name
+           * @param {Function} providerFunction Function for creating new instance of the service.
            * @description
            * See {@link auto.$provide#factory $provide.factory()}.
            */
@@ -262,10 +262,10 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#service
            * @module ng
-           * @param {string} name ch.javaee.mycv.service name
+           * @param {string} name service name
            * @param {Function} constructor A constructor function that will be instantiated.
            * @description
-           * See {@link auto.$provide#service $provide.ch.javaee.mycv.service()}.
+           * See {@link auto.$provide#service $provide.service()}.
            */
           service: invokeLaterAndSetModuleName('$provide', 'service'),
 
@@ -273,7 +273,7 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#value
            * @module ng
-           * @param {string} name ch.javaee.mycv.service name
+           * @param {string} name service name
            * @param {*} object Service instance object.
            * @description
            * See {@link auto.$provide#value $provide.value()}.
@@ -296,9 +296,9 @@ function setupModuleLoader(window) {
            * @ngdoc method
            * @name angular.Module#decorator
            * @module ng
-           * @param {string} The name of the ch.javaee.mycv.service to decorate.
-           * @param {Function} This function will be invoked when the ch.javaee.mycv.service needs to be
-           *                                    instantiated and should return the decorated ch.javaee.mycv.service instance.
+           * @param {string} The name of the service to decorate.
+           * @param {Function} This function will be invoked when the service needs to be
+           *                                    instantiated and should return the decorated service instance.
            * @description
            * See {@link auto.$provide#decorator $provide.decorator()}.
            */
@@ -317,7 +317,7 @@ function setupModuleLoader(window) {
            *
            *
            * Defines an animation hook that can be later used with
-           * {@link $animate $animate} ch.javaee.mycv.service and directives that use this ch.javaee.mycv.service.
+           * {@link $animate $animate} service and directives that use this service.
            *
            * ```js
            * module.animation('.animation-name', function($inject1, $inject2) {
@@ -383,9 +383,22 @@ function setupModuleLoader(window) {
 
           /**
            * @ngdoc method
+           * @name angular.Module#component
+           * @module ng
+           * @param {string} name Name of the component in camel-case (i.e. myComp which will match as my-comp)
+           * @param {Object} options Component definition object (a simplified
+           *    {@link ng.$compile#directive-definition-object directive definition object})
+           *
+           * @description
+           * See {@link ng.$compileProvider#component $compileProvider.component()}.
+           */
+          component: invokeLaterAndSetModuleName('$compileProvider', 'component'),
+
+          /**
+           * @ngdoc method
            * @name angular.Module#config
            * @module ng
-           * @param {Function} configFn Execute this function on module load. Useful for ch.javaee.mycv.service
+           * @param {Function} configFn Execute this function on module load. Useful for service
            *    configuration.
            * @description
            * Use this method to register work which needs to be performed on module loading.
@@ -458,7 +471,7 @@ setupModuleLoader(window);
  *   requires: !Array.<string>,
  *   invokeQueue: !Array.<Array.<*>>,
  *
- *   ch.javaee.mycv.service: function(string, Function):angular.Module,
+ *   service: function(string, Function):angular.Module,
  *   factory: function(string, Function):angular.Module,
  *   value: function(string, *):angular.Module,
  *

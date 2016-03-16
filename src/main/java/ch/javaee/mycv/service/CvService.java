@@ -1,6 +1,7 @@
 package ch.javaee.mycv.service;
 
 import ch.javaee.mycv.helper.IpAddressInfoHelper;
+import ch.javaee.mycv.model.Article;
 import ch.javaee.mycv.model.MongoClientProvider;
 import ch.javaee.mycv.model.Visitor;
 import com.mongodb.DBObject;
@@ -13,6 +14,8 @@ import org.bson.Document;
 import javax.ejb.Asynchronous;
 import javax.ejb.Stateless;
 import javax.inject.Inject;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 import static ch.javaee.mycv.model.ApplicationConstants.*;
@@ -27,6 +30,16 @@ public class CvService {
     @Inject
     MongoClientProvider mongoClientProvider;
 
+    public List<Article> getLatestArticles(){
+        MongoDatabase database = mongoClientProvider.getMongoClient().getDatabase(DB_CV);
+        MongoCollection collection = database.getCollection(DB_COLL_ARTICLE);
+        FindIterable<Document> iterable = collection.find().limit(10);
+        List<Article> jsonObjects = new ArrayList<>();
+        for (Document document : iterable){
+            jsonObjects.add(new Article(document.get("title").toString(), document.get("lead").toString(), document.get("content").toString(), document.get("author").toString()));
+        }
+        return jsonObjects;
+    }
 
 
      public String getCvByUser(String username) {
