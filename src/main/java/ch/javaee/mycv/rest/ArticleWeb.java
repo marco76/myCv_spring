@@ -2,30 +2,25 @@ package ch.javaee.mycv.rest;
 
 import ch.javaee.mycv.model.Article;
 import ch.javaee.mycv.service.CvService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.inject.Inject;
-import javax.ws.rs.GET;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
-import javax.ws.rs.core.Response;
 import java.util.List;
 
 /**
  * Created by marco on 16/03/16.
  */
-@Path("/article")
+@RequestMapping("/article")
 public class ArticleWeb {
 
-    @Inject
-    CvService cvService;
+    @Autowired
+    private CvService cvService;
 
-    @GET
-    @Path("latest")
-    @Produces("application/JSON")
-    public Response getLatestArticles(){
+    @RequestMapping("latest")
+    public List<Article> getLatestArticles(){
+
         List<Article> text = cvService.getLatestArticles();
 
-        return Response.status(200).entity(text).build();
-
+        return text;
     }
 }
