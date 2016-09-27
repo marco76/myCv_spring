@@ -19,8 +19,9 @@ public class ArticleWeb {
     @RequestMapping("latest")
     public List<Article> getLatestArticles(){
 
-        List<Article> text = cvService.getLatestArticles();
+        //List<Article> text = cvService.getLatestArticles();
 
-        return text;
+        //return text;
+        return null;
     }
 }

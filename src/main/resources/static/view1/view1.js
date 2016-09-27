@@ -16,7 +16,6 @@ angular.module('myApp.view1', ['ngRoute', 'ngSanitize'])
    var selectedUser = "marco";
     $http.get("/rest/cv/user/"+selectedUser).success(function (data) {
       $scope.profile = data;
-
   });
 }]);
 
